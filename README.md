@@ -1,17 +1,41 @@
-# Mutual Fund Analytics Capstone Project
+# Bluestock Mutual Fund Analytics Capstone
 
-## Overview
+## Project Overview
 
-This project is developed as part of the Bluestock Data Analyst Internship Program. The objective is to analyze mutual fund data, perform data cleaning and transformation, build a structured database, generate analytical insights, and create interactive dashboards for financial decision-making.
+This project analyzes Indian Mutual Fund data using Python, SQL, and Data Visualization techniques. The goal is to clean, process, store, and analyze mutual fund datasets to generate meaningful business insights for investors and fund management companies.
 
-## Project Objectives
+## Objectives
 
-* Perform ETL (Extract, Transform, Load) operations on mutual fund datasets.
-* Clean and validate financial data.
-* Store processed data in a SQLite database.
-* Execute analytical SQL queries.
-* Analyze mutual fund performance metrics.
-* Build dashboards and reports for business insights.
+* Perform data cleaning and validation on mutual fund datasets.
+* Design and implement a SQLite database.
+* Load cleaned datasets into the database.
+* Perform Exploratory Data Analysis (EDA).
+* Generate visualizations and insights from mutual fund data.
+* Build a foundation for future dashboard development.
+
+## Project Structure
+
+bluestock_mf_capstone/
+
+├── data/
+
+│   ├── raw/
+
+│   └── processed/
+
+├── notebooks/
+
+│   └── EDA_Analysis.ipynb
+
+├── reports/
+
+├── scripts/
+
+├── sql/
+
+├── README.md
+
+└── .gitignore
 
 ## Technologies Used
 
@@ -20,73 +44,55 @@ This project is developed as part of the Bluestock Data Analyst Internship Progr
 * NumPy
 * SQLite
 * SQLAlchemy
+* Jupyter Notebook
 * Matplotlib
 * Seaborn
 * Plotly
-* Jupyter Notebook
 * Git & GitHub
 
-## Project Structure
+## Day 1 Deliverables
 
-bluestock_mf_capstone/
+* Data ingestion from multiple CSV files.
+* Dataset validation and structure verification.
+* Project folder organization.
 
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── db/
+## Day 2 Deliverables
 
-├── scripts/
-│   ├── data_ingestion.py
-│   ├── live_nav_fetch.py
-│   ├── etl_pipeline.py
-│   ├── compute_metrics.py
-│   └── recommender.py
+* Data cleaning and preprocessing.
+* SQLite database creation.
+* Star schema design.
+* SQL analytical queries.
+* Data dictionary documentation.
 
-├── sql/
-│   ├── schema.sql
-│   └── queries.sql
+## Day 3 Deliverables
 
-├── reports/
-│   └── data_quality_summary.md
+* NAV trend analysis.
+* SIP inflow analysis.
+* AUM growth visualization.
+* Category inflow heatmaps.
+* Investor demographic analysis.
+* Geographic distribution analysis.
+* Correlation analysis.
+* Sector allocation visualization.
+* 15+ EDA charts and business insights.
 
-├── notebooks/
+## Key Insights
 
-├── dashboard/
+* Mutual fund SIP inflows showed consistent growth over the analysis period.
+* Fund performance varied significantly across categories.
+* Investor participation increased across multiple states and city tiers.
+* AUM concentration was higher among leading fund houses.
+* Portfolio diversification impacted fund risk and returns.
 
-├── .gitignore
+## Future Enhancements
 
-└── README.md
-
-## Features
-
-* Mutual Fund NAV Analysis
-* Investor Transaction Analysis
-* Fund Performance Evaluation
-* Data Quality Validation
-* SQLite Database Integration
-* Financial Analytics Reporting
-* Interactive Dashboard Development
-
-## Status
-
-Day 1 Completed:
-
-* Project Setup
-* Data Ingestion
-* Live NAV Fetch
-* AMFI Validation
-* Git Version Control Setup
-
-Day 2 In Progress:
-
-* Data Cleaning
-* Database Design
-* SQL Analytics
+* Interactive dashboard using Streamlit or Power BI.
+* Predictive modeling for NAV forecasting.
+* Real-time mutual fund data integration.
+* Automated reporting system.
 
 ## Author
 
-Bindu Manthi
+**Bindu Madhavi Manthi**
 
-## Internship
-
-Bluestock Fintech – Data Analyst Internship
+Data Analyst Intern – Bluestock Fintech

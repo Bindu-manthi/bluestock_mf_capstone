@@ -1,146 +1,196 @@
-# 📊 Bluestock Mutual Fund Analytics Capstone
+# Bluestock Mutual Fund Analytics Capstone
 
-## 📌 Project Overview
-This project analyzes Indian mutual fund data using Python, SQL, and data visualization techniques. It covers NAV trends, SIP inflows, AUM growth, and fund performance evaluation using financial metrics and benchmark comparison.
+## Project Overview
 
----
+The Bluestock Mutual Fund Analytics Capstone Project is an end-to-end financial analytics solution designed to analyze mutual fund performance, investor behavior, market trends, and portfolio risk.
 
-## 🎯 Objectives
-- Clean and process mutual fund datasets  
-- Build SQLite database using star schema  
-- Perform exploratory data analysis (EDA)  
-- Calculate financial performance metrics  
-- Build fund ranking scorecard system  
-- Compare funds with benchmark indices  
+The project integrates data engineering, exploratory data analysis, performance evaluation, advanced risk analytics, and dashboard visualization to generate actionable insights for investors and financial analysts.
+
+The solution was developed using Python, SQLite, Power BI, and various data analytics libraries to create a scalable workflow for mutual fund analysis.
 
 ---
 
-## 📁 Project Structure
+## Project Objectives
 
+* Build an automated ETL pipeline for mutual fund datasets.
+* Clean and transform raw financial data.
+* Store processed datasets in a SQLite database.
+* Perform exploratory data analysis (EDA).
+* Evaluate mutual fund performance using financial metrics.
+* Calculate Alpha, Beta, Sharpe Ratio, VaR, and CVaR.
+* Analyze investor behavior and SIP trends.
+* Develop an interactive Power BI dashboard.
+* Generate investment insights and recommendations.
+
+---
+
+## Project Structure
+
+```text
 bluestock_mf_capstone/
-
+│
 ├── data/
 │   ├── raw/
-│   │   ├── 01_fund_master.csv
-│   │   ├── 02_nav_history.csv
-│   │   ├── 03_aum_by_fund_house.csv
-│   │   ├── 04_monthly_sip_inflows.csv
-│   │   ├── 05_category_inflows.csv
-│   │   ├── 06_industry_folio_count.csv
-│   │   ├── 07_scheme_performance.csv
-│   │   ├── 08_investor_transactions.csv
-│   │   ├── 09_portfolio_holdings.csv
-│   │   ├── 10_benchmark_indices.csv
-│   │   └── HDFC_Top100_live_nav.csv
-│
-│   └── processed/
+│   ├── processed/
+│   └── db/
 │
 ├── notebooks/
 │   ├── EDA_Analysis.ipynb
 │   ├── Performance_Analytics.ipynb
+│   ├── Advanced_Analytics.ipynb
+│
+├── screenshots/
+│   ├── Industry_Overview.png
+│   ├── Fund_Performance.png
+│   ├── Investor_Analytics.png
+│   └── SIP_Market_Trends.png
 │
 ├── scripts/
 │   ├── data_ingestion.py
-│   ├── live_nav_fetch.py
 │   ├── data_cleaning.py
+│   ├── database.py
+│   ├── etl_pipeline.py
+│   └── recommender.py
 │
 ├── sql/
 │   ├── schema.sql
-│   ├── queries.sql
+│   └── queries.sql
 │
-├── reports/
-│   ├── data_dictionary.md
-│
-├── dashboard/
-├── requirements.txt
+├── run_pipeline.py
+├── bluestock_mf.db
+├── Bluestock_mf_capstone.pbix
 ├── README.md
+├── requirements.txt
 └── .gitignore
+```
 
 ---
 
-## 🛠️ Technologies Used
-- Python 🐍  
-- Pandas, NumPy  
-- SQLite, SQLAlchemy  
-- Matplotlib, Seaborn, Plotly  
-- Jupyter Notebook  
-- Git & GitHub  
+## Data Sources
+
+The project uses multiple mutual fund datasets including:
+
+* Fund Master Data
+* NAV History Data
+* AUM by Fund House Data
+* Monthly SIP Inflow Data
+* Category Inflow Data
+* Industry Folio Count Data
+* Scheme Performance Data
+* Investor Transaction Data
+* Portfolio Holdings Data
+* Benchmark Index Data
 
 ---
 
-## 📅 Project Workflow
+## ETL Pipeline
 
-### 🟢 Day 1: Data Ingestion
-- Loaded multiple CSV datasets  
-- Fetched live NAV data using API  
-- Validated AMFI scheme codes  
-- Organized project structure  
+The ETL pipeline automates data extraction, cleaning, transformation, and storage.
 
----
+### Pipeline Flow
 
-### 🟡 Day 2: Data Cleaning & SQL
-- Cleaned NAV and transaction datasets  
-- Standardized formats and removed errors  
-- Designed SQLite star schema  
-- Loaded data into database  
-- Created SQL queries  
+Raw Datasets → Data Ingestion → Data Cleaning → SQLite Database → Analytics → Dashboard
+
+### Run the Pipeline
+
+```bash
+python run_pipeline.py
+```
 
 ---
 
-### 🔵 Day 3: Exploratory Data Analysis (EDA)
-- NAV trend analysis (2022–2026)  
-- SIP inflows and AUM growth  
-- Investor demographics analysis  
-- Geographic distribution  
-- Correlation heatmaps  
-- 15+ visualizations created  
+## Exploratory Data Analysis
+
+Key analyses include:
+
+* Data validation and quality assessment
+* Fund category analysis
+* Industry growth trends
+* Investor participation analysis
+* SIP trend analysis
 
 ---
 
-### 🟣 Day 4: Performance Analytics
-- Daily returns calculation  
-- CAGR (1Y, 3Y, 5Y)  
-- Sharpe & Sortino ratios  
-- Alpha & Beta vs Nifty 100  
-- Maximum Drawdown analysis  
-- Fund Scorecard (0–100 ranking model)  
-- Benchmark comparison (Nifty 50 vs Nifty 100)  
+## Performance Analytics
+
+Implemented metrics include:
+
+* CAGR Analysis
+* Benchmark Comparison
+* Alpha Analysis
+* Beta Analysis
+* Risk-adjusted Performance Evaluation
 
 ---
 
-## 📊 Key Insights
-- SIP inflows show consistent growth over time  
-- Large-cap funds are more stable and less volatile  
-- Fund performance varies significantly across categories  
-- Top funds consistently outperform benchmarks  
-- Risk-adjusted metrics are critical for fund selection  
+## Advanced Analytics
+
+Implemented advanced analytics include:
+
+* Historical VaR (95%)
+* Conditional VaR (CVaR)
+* Rolling Sharpe Ratio
+* Investor Cohort Analysis
+* SIP Continuity Analysis
+* Risk-Based Fund Recommendation System
 
 ---
 
-## 📦 Final Outputs
-- fund_scorecard.csv  
-- alpha_beta.csv  
-- benchmark_comparison.png  
-- Cleaned datasets  
-- EDA charts and insights  
+## Dashboard
+
+The Power BI dashboard consists of four major sections:
+
+### Industry Overview
+
+Provides a high-level view of mutual fund industry growth and category distribution.
+
+### Fund Performance
+
+Analyzes fund returns, rankings, and benchmark comparisons.
+
+### Investor Analytics
+
+Evaluates investor participation and transaction behavior.
+
+### SIP & Market Trends
+
+Tracks SIP inflows and long-term investment patterns.
 
 ---
 
-## 🚀 Future Improvements
-- Streamlit dashboard for interactive analysis  
-- Real-time NAV tracking system  
-- Predictive modeling for fund performance  
-- Automated reporting system  
+## Key Outputs
+
+### Reports
+
+* alpha_beta.csv
+* fund_scorecard.csv
+* final_fund_scorecard.csv
+* var_cvar_report.csv
+
+### Visualizations
+
+* benchmark_comparison.png
+* rolling_sharpe_chart.png
+* Dashboard screenshots
 
 ---
 
-## 👨‍💻 Author
-**Bindu Madhavi Manthi**  
-Data Analyst Intern – Bluestock Fintech  
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* SQLite
+* Jupyter Notebook
+* Power BI
+* Git
+* GitHub
 
 ---
 
-## 🏁 Conclusion
-This project builds a complete mutual fund analytics pipeline covering data engineering, SQL modeling, exploratory analysis, and financial performance evaluation.
+## Author
 
----
+**Bindu Madhavi Manthi**
+
+Bluestock Mutual Fund Analytics Capstone Project
